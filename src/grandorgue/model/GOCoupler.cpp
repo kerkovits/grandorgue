@@ -307,8 +307,7 @@ void GOCoupler::ChangeKey(int note, unsigned velocity) {
       m_CurrentTone = -1;
     }
 
-    if (((velocity > 0 && nextNote == note)
-         || (velocity == 0 && nextNote == m_LastTone)))
+    if (((velocity > 0) || (velocity == 0 && nextNote == m_LastTone)))
       m_CurrentTone = nextNote;
 
     if (m_CurrentTone != -1)
